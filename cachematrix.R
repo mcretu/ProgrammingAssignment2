@@ -35,7 +35,7 @@ makeCacheMatrix <- function(x = matrix()) {
 	get <- function()x
 	
 ## setinv function
-	setinv <- function (inverse) inc <<- inverse
+	setinv <- function (inverse) inv <<- inverse
 	
 ## getinv function
 	getinv <- function()inv
@@ -66,7 +66,7 @@ cacheSolve <- function(x, ...) {
 ## calculate the inverse of the matrix using solve function
 	inv <- solve (data,...)
 	
-## Call setinv function from above
+## call setinv function from above
 	x$setinv(inv)
 
 ## return and print inv
